@@ -11,6 +11,7 @@ import MonthlyIncome from "../../components/MonthlyIncome";
 import YearlyIncomeTaxDeduction from "../../components/YearlyIncomeTaxDeduction";
 import MonthlyExpense from "../../components/MonthlyExpenses";
 import YearlyExpenseCalculator from "../../components/YearlyExpenseCalculator";
+import LogoutButton from "../components/LogoutButton";
 
 const UserPage = () => {
   const [formData, setFormData] = useState({
@@ -212,6 +213,7 @@ const UserPage = () => {
       <YearlyIncomeTaxDeduction/>
       <MonthlyExpense/>
       <YearlyExpenseCalculator/>
+      <LogoutButton/>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
+import LogoutButton from "../components/LogoutButton";
 
 const AdminPage = () => {
   const [data, setData] = useState([]);
@@ -86,7 +87,7 @@ const AdminPage = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-[#97e6cb] p-[1rem]">
       <div
-        className="flex rounded-[1rem] flex-col items-center justify-center"
+        className="flex rounded-[1rem] flex-col items-center justify-center gap-[1rem]"
         style={{
           boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
           padding: "1rem",
@@ -149,7 +150,9 @@ const AdminPage = () => {
             )}
           </tbody>
         </table>
+        <LogoutButton/>
       </div>
+
     </div>
   );
 };

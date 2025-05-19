@@ -34,7 +34,8 @@ const SignUpPage = () => {
       const res = await axios.post(`${backendUrl}/register`, {
         name: userData.name,
         email: userData.email,
-        password: userData.password
+        password: userData.password,
+        role: 'user'
       });
 
       alert("User registered successfully!");
