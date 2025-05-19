@@ -7,6 +7,10 @@ import CalculateIcon from "@mui/icons-material/Calculate";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
+import MonthlyIncome from "../../components/MonthlyIncome";
+import YearlyIncomeTaxDeduction from "../../components/YearlyIncomeTaxDeduction";
+import MonthlyExpense from "../../components/MonthlyExpenses";
+import YearlyExpenseCalculator from "../../components/YearlyExpenseCalculator";
 
 const UserPage = () => {
   const [formData, setFormData] = useState({
@@ -119,7 +123,8 @@ const UserPage = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen bg-[#97e6cb] p-[1rem]">
+    <div className="flex flex-col justify-center items-center  bg-[#97e6cb] p-[1rem]">
+      <div className="flex gap-[2rem] flex-col">
       <div
         className="flex rounded-[1rem] flex-col items-center justify-center"
         style={{
@@ -202,6 +207,11 @@ const UserPage = () => {
             </div>
           )}
         </div>
+      </div>
+      <MonthlyIncome/>
+      <YearlyIncomeTaxDeduction/>
+      <MonthlyExpense/>
+      <YearlyExpenseCalculator/>
       </div>
     </div>
   );
